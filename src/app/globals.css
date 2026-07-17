@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/*
+  1031 Referral brand foundation.
+  Tailwind v4 uses CSS-based theme config via @theme.
+  Font stacks are local-safe so preview/build does not depend on Google Fonts.
+*/
+
+@theme {
+  --color-gold: #f6b431;
+  --color-gold-dark: #e0a01f;
+  --color-navy: #344d71;
+  --color-ink: #253957;
+  --color-muted: #5b6b82;
+  --color-cream: #f7f5f0;
+
+  --font-heading: Merriweather, Georgia, serif;
+  --font-body: Lato, system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #253957;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* offset anchor jumps so the sticky header doesn't cover section tops */
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
